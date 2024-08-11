@@ -1,0 +1,644 @@
+                                                           MongoDB Task2
+
+Design database for Zen class programme
+
+users
+codekata
+attendance
+topics
+tasks
+company_drives
+mentors
+
+
+
+
+In MongoDB I have created a DataBase called Test in that i have create the above collection.
+
+                              Test(DataBase)
+                                 |
+                                 |
+                                 |
+                                 |
+                                 |______  Users  
+                                    | 
+                                    |_____ codekata
+                                    |
+                                    |_____Attendance
+                                    |
+                                    |_____topics
+                                    |
+                                    |_____tasks
+                                    |
+                                    |_____company_drives
+                                    |
+                                    |_____mentors 
+
+
+
+users document:
+ 
+  {
+  "_id": {
+    "$oid": "66b8c7bd4f29eac77442eb79"
+  },
+  "name": "John",
+  "email": "john@gmail.com",
+  "role": "student",
+  "joined_date": {
+    "$date": "2020-10-15T00:00:00.000Z"
+  }
+}
+
+{
+  "_id": {
+    "$oid": "66b8c7bd4f29eac77442eb7a"
+  },
+  "name": "ajay",
+  "email": "ajay@gmail.com",
+  "role": "student",
+  "joined_date": {
+    "$date": "2020-10-16T00:00:00.000Z"
+  }
+}
+
+{
+  "_id": {
+    "$oid": "66b8c7bd4f29eac77442eb7b"
+  },
+  "name": "vicky",
+  "email": "vicky@gmail.com",
+  "role": "student",
+  "joined_date": {
+    "$date": "2020-10-20T00:00:00.000Z"
+  }
+}
+
+{
+  "_id": {
+    "$oid": "66b8c7bd4f29eac77442eb7c"
+  },
+  "name": "vk",
+  "email": "vk@gmail.com",
+  "role": "student",
+  "joined_date": {
+    "$date": "2020-10-30T00:00:00.000Z"
+  }
+}
+
+
+codekata document :
+
+{
+  "_id": {
+    "$oid": "66b8c92f4f29eac77442eb7d"
+  },
+  "user_id": {
+    "$oid": "66b8c7bd4f29eac77442eb79"
+  },
+  "problems_solved": 17,
+  "date": {
+    "$date": "2020-10-15T00:00:00.000Z"
+  }
+}
+
+{
+  "_id": {
+    "$oid": "66b8c92f4f29eac77442eb7e"
+  },
+  "user_id": {
+    "$oid": "66b8c7bd4f29eac77442eb7a"
+  },
+  "problems_solved": 13,
+  "date": {
+    "$date": "2020-10-20T00:00:00.000Z"
+  }
+}
+
+{
+  "_id": {
+    "$oid": "66b8c92f4f29eac77442eb7f"
+  },
+  "user_id": {
+    "$oid": "66b8c7bd4f29eac77442eb7b"
+  },
+  "problems_solved": 20,
+  "date": {
+    "$date": "2020-10-25T00:00:00.000Z"
+  }
+}
+
+{
+  "_id": {
+    "$oid": "66b8c92f4f29eac77442eb80"
+  },
+  "user_id": {
+    "$oid": "66b8c7bd4f29eac77442eb7c"
+  },
+  "problems_solved": 25,
+  "date": {
+    "$date": "2020-10-30T00:00:00.000Z"
+  }
+}
+
+
+
+Attendance document: 
+
+{
+  "_id": {
+    "$oid": "66b8cb044f29eac77442eb81"
+  },
+  "user_id": {
+    "$oid": "60d5f4837d1a4b4cd4567890"
+  },
+  "date": {
+    "$date": "2020-10-20T00:00:00.000Z"
+  },
+  "status": "present"
+}
+
+{
+  "_id": {
+    "$oid": "66b8cb044f29eac77442eb82"
+  },
+  "user_id": {
+    "$oid": "60d5f4837d1a4b4cd4567890"
+  },
+  "date": {
+    "$date": "2020-10-23T00:00:00.000Z"
+  },
+  "status": "Absent"
+}
+
+{
+  "_id": {
+    "$oid": "66b8cb044f29eac77442eb83"
+  },
+  "user_id": {
+    "$oid": "60d5f4837d1a4b4cd4567890"
+  },
+  "date": {
+    "$date": "2020-10-19T00:00:00.000Z"
+  },
+  "status": "present"
+}
+
+{
+  "_id": {
+    "$oid": "66b8cb044f29eac77442eb84"
+  },
+  "user_id": {
+    "$oid": "60d5f4837d1a4b4cd4567890"
+  },
+  "date": {
+    "$date": "2020-10-14T00:00:00.000Z"
+  },
+  "status": "Absent"
+}
+
+
+topics document: 
+
+{
+  "_id": {
+    "$oid": "66b8ce8a4f29eac77442eb85"
+  },
+  "title": "Introduction to MongoDB",
+  "description": "Basic introduction to MongoDB, covering CRUD operations.",
+  "date": {
+    "$date": "2020-10-18T00:00:00.000Z"
+  },
+  "tasks": [
+    {
+      "$oid": "60d5f4f37d1a4b4cd4567891"
+    }
+  ]
+}
+
+{
+  "_id": {
+    "$oid": "66b8ce8a4f29eac77442eb86"
+  },
+  "title": "Introduction to SQLDB",
+  "description": "Basic introduction to SQLDB, covering Basic operations.",
+  "date": {
+    "$date": "2020-10-25T00:00:00.000Z"
+  },
+  "tasks": [
+    {
+      "$oid": "60d5f4f37d1a4b4cd4567891"
+    }
+  ]
+}
+
+
+tasks document:
+
+{
+  "_id": {
+    "$oid": "66b8d09f4f29eac77442eb88"
+  },
+  "title": "CRUD Operations in MongoDB",
+  "description": "Practice CRUD operations in MongoDB.",
+  "due_date": {
+    "$date": "2020-10-15T00:00:00.000Z"
+  },
+  "submitted_by": [
+    {
+      "$oid": "66b8c7bd4f29eac77442eb79"
+    }
+  ]
+}
+
+{
+  "_id": {
+    "$oid": "66b8d09f4f29eac77442eb89"
+  },
+  "title": "Design GUVI database in SQL",
+  "description": "using baasic SQL basic operations",
+  "due_date": {
+    "$date": "2020-10-20T00:00:00.000Z"
+  },
+  "submitted_by": [
+    {
+      "$oid": "66b8c7bd4f29eac77442eb7a"
+    }
+  ]
+}
+
+{
+  "_id": {
+    "$oid": "66b8d09f4f29eac77442eb8a"
+  },
+  "title": "SQL Bolt",
+  "description": "using the link complete the task",
+  "due_date": {
+    "$date": "2020-10-25T00:00:00.000Z"
+  },
+  "submitted_by": [
+    {
+      "$oid": "66b8c7bd4f29eac77442eb7b"
+    }
+  ]
+}
+
+{
+  "_id": {
+    "$oid": "66b8d09f4f29eac77442eb8b"
+  },
+  "title": "Mongo DB basic operation",
+  "description": "complete basic operations",
+  "due_date": {
+    "$date": "2020-10-19T00:00:00.000Z"
+  },
+  "submitted_by": [
+    {
+      "$oid": "66b8c7bd4f29eac77442eb79"
+    }
+  ]
+}
+
+
+company_drives document: 
+
+{
+  "_id": {
+    "$oid": "66b8d1664f29eac77442eb8d"
+  },
+  "company_name": "Tech Corp",
+  "date": {
+    "$date": "2020-10-25T00:00:00.000Z"
+  },
+  "attendees": [
+    {
+      "$oid": "66b8c7bd4f29eac77442eb7b"
+    }
+  ]
+}
+
+{
+  "_id": {
+    "$oid": "66b8d1664f29eac77442eb8e"
+  },
+  "company_name": "infosys",
+  "date": {
+    "$date": "2020-10-30T00:00:00.000Z"
+  },
+  "attendees": [
+    {
+      "$oid": "66b8c7bd4f29eac77442eb79"
+    }
+  ]
+}
+
+
+mentors document:
+
+{
+  "_id": {
+    "$oid": "66b8d26c4f29eac77442eb90"
+  },
+  "name": "Jane Smith",
+  "email": "jane.smith@example.com",
+  "mentee_count": 20
+}
+
+{
+  "_id": {
+    "$oid": "66b8d26c4f29eac77442eb91"
+  },
+  "name": "Arjun",
+  "email": "arjun@gmail.com",
+  "mentee_count": 25
+}
+
+
+{
+  "_id": {
+    "$oid": "66b8d26c4f29eac77442eb92"
+  },
+  "name": "Jane ",
+  "email": "jane@gmail.com",
+  "mentee_count": 20
+}
+
+
+
+
+Question 1  : Find all the topics and tasks which are thought in the month of October
+
+
+Solution: 
+
+ db.topics.find({ "date": { $gte: ISODate("2020-10-01"), $lte: ISODate("2020-10-31") } })
+
+{
+  "_id": {
+    "$oid": "66b8ce8a4f29eac77442eb85"
+  },
+  "title": "Introduction to MongoDB",
+  "description": "Basic introduction to MongoDB, covering CRUD operations.",
+  "date": {
+    "$date": "2020-10-18T00:00:00.000Z"
+  },
+  "tasks": [
+    {
+      "$oid": "60d5f4f37d1a4b4cd4567891"
+    }
+  ]
+}
+
+{
+  "_id": {
+    "$oid": "66b8ce8a4f29eac77442eb86"
+  },
+  "title": "Introduction to SQLDB",
+  "description": "Basic introduction to SQLDB, covering Basic operations.",
+  "date": {
+    "$date": "2020-10-25T00:00:00.000Z"
+  },
+  "tasks": [
+    {
+      "$oid": "60d5f4f37d1a4b4cd4567891"
+    }
+  ]
+}
+
+ db.tasks.find({ "due_date": { $gte: ISODate("2020-10-01"), $lte: ISODate("2020-10-31") } })
+
+{
+  "_id": {
+    "$oid": "66b8d09f4f29eac77442eb88"
+  },
+  "title": "CRUD Operations in MongoDB",
+  "description": "Practice CRUD operations in MongoDB.",
+  "due_date": {
+    "$date": "2020-10-15T00:00:00.000Z"
+  },
+  "submitted_by": [
+    {
+      "$oid": "66b8c7bd4f29eac77442eb79"
+    }
+  ]
+}
+
+{
+  "_id": {
+    "$oid": "66b8d09f4f29eac77442eb89"
+  },
+  "title": "Design GUVI database in SQL",
+  "description": "using baasic SQL basic operations",
+  "due_date": {
+    "$date": "2020-10-20T00:00:00.000Z"
+  },
+  "submitted_by": [
+    {
+      "$oid": "66b8c7bd4f29eac77442eb7a"
+    }
+  ]
+}
+
+{
+  "_id": {
+    "$oid": "66b8d09f4f29eac77442eb8a"
+  },
+  "title": "SQL Bolt",
+  "description": "using the link complete the task",
+  "due_date": {
+    "$date": "2020-10-25T00:00:00.000Z"
+  },
+  "submitted_by": [
+    {
+      "$oid": "66b8c7bd4f29eac77442eb7b"
+    }
+  ]
+}
+
+
+{
+  "_id": {
+    "$oid": "66b8d09f4f29eac77442eb8b"
+  },
+  "title": "Mongo DB basic operation",
+  "description": "complete basic operations",
+  "due_date": {
+    "$date": "2020-10-19T00:00:00.000Z"
+  },
+  "submitted_by": [
+    {
+      "$oid": "66b8c7bd4f29eac77442eb79"
+    }
+  ]
+}
+
+
+
+Question 2 : Find all the company drives which appeared between 15 oct-2020 and 31-oct-2020
+
+Solution :
+
+db.company_drives.find({
+    "date": {
+        $gte: ISODate("2020-10-15"),
+        $lte: ISODate("2020-10-31")
+    }
+})
+
+
+{
+  "_id": {
+    "$oid": "66b8d1664f29eac77442eb8d"
+  },
+  "company_name": "Tech Corp",
+  "date": {
+    "$date": "2020-10-25T00:00:00.000Z"
+  },
+  "attendees": [
+    {
+      "$oid": "66b8c7bd4f29eac77442eb7b"
+    }
+  ]
+}
+
+{
+  "_id": {
+    "$oid": "66b8d1664f29eac77442eb8e"
+  },
+  "company_name": "infosys",
+  "date": {
+    "$date": "2020-10-30T00:00:00.000Z"
+  },
+  "attendees": [
+    {
+      "$oid": "66b8c7bd4f29eac77442eb79"
+    }
+  ]
+}
+
+
+Question 3 :  Find all the company drives and students who are appeared for the placement.
+
+Solution :  
+
+db.company_drives.aggregate([
+    {
+        $lookup: {
+            from: "users", 
+            localField: "attendees", 
+            foreignField: "_id", 
+            as: "students" 
+        }
+    },
+    {
+        $project: {
+            _id: 1,
+            company_name: 1,
+            date: 1,
+            students: {
+                _id: 1,
+                name: 1,
+                email: 1
+            }
+        }
+    }
+])
+
+                        ***output Screenshot added***
+
+
+
+
+
+Question 4 : Find the number of problems solved by the user in codekata
+
+Solution : 
+
+db.codekata.aggregate([
+    {
+        $match: {
+            "user_id": ObjectId("66b8c7bd4f29eac77442eb7a") /// i have provided specific id of a student based on that we get no of problems_solved//
+        }
+    },
+    {
+        $group: {
+            _id: "$user_id",
+            total_problems_solved: { $sum: "$problems_solved" }
+        }
+    }
+])
+
+                        ***output Screenshot added***
+
+
+
+
+
+Question 5 : Find all the mentors with who has the mentee's count more than 15
+
+Solution:
+
+db.mentors.find({mentee_count:{$gt:15}})
+
+
+                          ***output Screenshot added***
+
+
+
+
+Question 6 :  Find the number of users who are absent and task is not submitted  between 15 oct-2020 and 31-oct-2020
+
+Solution :
+
+db.attendance.aggregate([
+    {
+        $match: {
+            "date": { $gte: ISODate("2020-10-15"), $lte: ISODate("2020-10-31") },
+            "status": "absent"
+        }
+    },
+    {
+        $lookup: {
+            from: "tasks",
+            let: { userId: "$user_id", date: "$date" },
+            pipeline: [
+                {
+                    $match: {
+                        $expr: {
+                            $and: [
+                                { $eq: ["$user_id", "$$userId"] },
+                                { $eq: ["$due_date", "$$date"] },
+                                { $eq: ["$status", "not submitted"] }
+                            ]
+                        }
+                    }
+                }
+            ],
+            as: "unsubmitted_tasks"
+        }
+    },
+    {
+        $match: {
+            "unsubmitted_tasks": { $ne: [] }
+        }
+    },
+    {
+        $group: {
+            _id: "$user_id",
+            count: { $sum: 1 }
+        }
+    },
+    {
+        $count: "total_absent_and_not_submitted"
+    }
+])
+
+
+
+
+
+
+
+
+
+
