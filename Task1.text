@@ -189,7 +189,7 @@ Question : 1 - Find all the information about each products
 
 Solution : 
 
-db.users.find(
+db.users.find()
 
 [
     {
